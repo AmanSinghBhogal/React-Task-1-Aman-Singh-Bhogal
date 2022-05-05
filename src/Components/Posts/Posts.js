@@ -25,4 +25,8 @@ const Container = styled.div`
     box-sizing: border-box;
     width: 60%;
     min-height: 70vh;
+    @media (max-width: 756px)
+    {
+        width: 100%;
+    }
 `;

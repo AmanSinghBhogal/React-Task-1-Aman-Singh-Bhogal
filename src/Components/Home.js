@@ -21,4 +21,8 @@ const Container = styled.div`
     box-sizing: border-box;
     padding: 2% 10%;
     margin: 0;
+    @media (max-width: 756px)
+    {
+        flex-direction: column-reverse;
+    }
 `;

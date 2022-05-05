@@ -23,6 +23,7 @@ const Container = styled.div`
     border-radius: 10px;
     height: 250px;
     width: 200px;
+    margin: 5px;
 `;
 const Post__Title = styled.div`
     display: flex;
