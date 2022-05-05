@@ -1,16 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from './Post/Post';
+import { useSelector } from "react-redux";
 
 function Posts() {
-  return (
-    <Container>
-        <Post title={"Dummy Post 1"} body={"Dummy Post Message."} />
-        <Post title={"Dummy Post 2"} body={"Dummy Post Message."} />
-        <Post title={"Dummy Post 3"} body={"Dummy Post Message."} />
-        <Post title={"Dummy Post 4"} body={"Dummy Post Message."} />
-    </Container>
-  )
+      const posts = useSelector(
+        (state) => 
+                state.posts
+    );
+    console.log(`Posts are: ${posts}`);
+    return (
+      <Container>
+          {
+            posts.map((post) => (
+              <Post key={post.id} title={post.title} body={post.body} />
+            ))
+          }
+      </Container>
+    )
 };
 
 export default Posts;

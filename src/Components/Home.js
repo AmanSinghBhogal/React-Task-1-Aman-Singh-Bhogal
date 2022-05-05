@@ -1,15 +1,23 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import styled from 'styled-components';
 import Posts from './Posts/Posts';
 import Form from './Form';
+import { useDispatch } from "react-redux";
+import { getPosts } from '../actions/posts';
 
 function Home() {
-  return (
-    <Container>
-        <Posts />
-        <Form />
-    </Container>
-  )
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPosts());
+    }, [dispatch]);
+
+    return (
+        <Container>
+            <Posts />
+            <Form />
+        </Container>
+    )
 };
 
 export default Home;

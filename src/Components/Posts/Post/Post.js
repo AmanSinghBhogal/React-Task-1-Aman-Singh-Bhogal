@@ -21,8 +21,8 @@ const Container = styled.div`
     flex-direction: column;
     border: 1px solid grey;
     border-radius: 10px;
-    height: 250px;
-    width: 200px;
+    height: 280px;
+    width: 220px;
     margin: 5px;
 `;
 const Post__Title = styled.div`
@@ -31,9 +31,9 @@ const Post__Title = styled.div`
     align-items: center;
     box-sizing: border-box;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    height: 30%;
+    min-height: 40%;
     border-bottom: 1px solid grey;
 `;
 const Post__Body = styled.div`
@@ -41,5 +41,7 @@ const Post__Body = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    height: 70%;
+    min-height: 60%;
+    box-sizing: border-box;
+    padding: 5px;
 `;
