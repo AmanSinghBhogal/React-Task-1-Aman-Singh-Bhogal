@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react';
+import React,{ useEffect,useState } from 'react';
 import styled from 'styled-components';
 import Posts from './Posts/Posts';
 import Form from './Form';
@@ -6,7 +6,10 @@ import { useDispatch } from "react-redux";
 import { getPosts } from '../actions/posts';
 
 function Home() {
+
     const dispatch = useDispatch();
+
+    const [editPost, setEditPost ] = useState('');
 
     useEffect(() => {
         dispatch(getPosts());
@@ -14,8 +17,8 @@ function Home() {
 
     return (
         <Container>
-            <Posts />
-            <Form />
+            <Posts editPost={editPost} setEditPost={setEditPost} />
+            <Form editPost={editPost} setEditPost={setEditPost} />
         </Container>
     )
 };

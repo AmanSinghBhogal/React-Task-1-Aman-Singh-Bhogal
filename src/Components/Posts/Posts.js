@@ -3,17 +3,16 @@ import styled from 'styled-components';
 import Post from './Post/Post';
 import { useSelector } from "react-redux";
 
-function Posts() {
+function Posts({editPost, setEditPost}) {
       const posts = useSelector(
         (state) => 
                 state.posts
     );
-    console.log(`Posts are: ${posts}`);
     return (
       <Container>
           {
             posts.map((post) => (
-              <Post key={post.id} title={post.title} body={post.body} />
+              <Post key={post.id} post={post} editPost={editPost} setEditPost={setEditPost}/>
             ))
           }
       </Container>
@@ -27,8 +26,6 @@ const Container = styled.div`
     justify-content: center;
     padding: 0 10px;
     flex-wrap: wrap;
-    border: 2px solid grey;
-    border-radius: 10px;
     box-sizing: border-box;
     width: 60%;
     min-height: 70vh;
