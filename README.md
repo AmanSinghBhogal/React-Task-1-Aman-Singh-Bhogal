@@ -4,6 +4,14 @@
 
 <h2>Deployment Link: https://reacttask-i.firebaseapp.com/</h2>
 
+### ScreenShots:
+
+<div align="center">
+  <img src="./public/images/a.jpg" height="600"  alt="SS1">
+  <img src="./public/images/b.jpg" height="600"  alt="SS1">
+  <img src="./public/images/c.jpg" height="600"  alt="SS1">
+</div>
+
 ### Steps to Run on Local Machine
 
 ***
